@@ -11,17 +11,17 @@ public class dupCount {
         char[] charArray = inputString.toCharArray();
 
         
-        int[] charCount = new int[256]; // Assuming ASCII characters
+        int[] cnt = new int[256];
 
         
         for (char ch : charArray) {
-            charCount[ch]++;
+            cnt[ch]++;
         }
 
         
         for (int i = 0; i < charCount.length; i++) {
-            if (charCount[i] > 1) {
-                System.out.println("Character '" + (char) i + "' appears " + charCount[i] + " times.");
+            if (cnt[i] > 1) {
+                System.out.println("Character '" + (char) i + "' appears " + cnt[i] + " times.");
             }
             sc.close();
         }
