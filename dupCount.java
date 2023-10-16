@@ -19,7 +19,7 @@ public class dupCount {
         }
 
         
-        for (int i = 0; i < charCount.length; i++) {
+        for (int i = 0; i <cnt.length; i++) {
             if (cnt[i] > 1) {
                 System.out.println("Character '" + (char) i + "' appears " + cnt[i] + " times.");
             }
