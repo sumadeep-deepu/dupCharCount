@@ -1,29 +1,31 @@
 import java.util.Scanner;
-public class dupCount {
+
+class Practice {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-       Scanner sc= new Scanner(System.in);
-
+        System.out.println("Enter the string");
 
         String inputString = sc.nextLine();
 
-        
         char[] charArray = inputString.toCharArray();
 
-        
-        int[] cnt = new int[256];
+        int[] cnt = new int[128];
 
-        
         for (char ch : charArray) {
-            cnt[ch]++;
+            if (ch != ' ') { 
+                cnt[ch]++;
+            }
         }
 
-        
-        for (int i = 0; i <cnt.length; i++) {
+        for (int i = 0; i < cnt.length; i++) {
             if (cnt[i] > 1) {
-                System.out.println("Character '" + (char) i + "' appears " + cnt[i] + " times.");
+                if ((char) i != ' ') { 
+                    System.out.println("Character " + (char) i + ": " + cnt[i] + " times");
+                }
             }
-            sc.close();
         }
+
+        sc.close();
     }
 }
