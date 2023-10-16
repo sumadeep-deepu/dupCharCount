@@ -10,7 +10,7 @@ class Practice {
 
         char[] charArray = inputString.toCharArray();
 
-        int[] cnt = new int[128];
+        int[] cnt = new int[256];
 
         for (char ch : charArray) {
             if (ch != ' ') { 
